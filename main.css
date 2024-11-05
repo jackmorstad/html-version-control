@@ -1,0 +1,36 @@
+* body {
+    background-color: orange;
+} /*changing background colour*/
+#firstparagraph {
+    color: rgb(17, 255, 0);
+}
+.bodies {
+    background-color: rgb(42, 159, 165);
+} /*changing background colour on text under the class "bodies"*/ 
+ul.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Enable Flexbox */
+}
+#main-body {
+    border: 2px solid black; /* 2px wide, solid, black color border */
+  }
+.bodies {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font size: 3px;
+    font: weight 4px;
+    letter: spacing 3px; (ie. tracking)
+    line-height (ie. leading)
+    text: align 3px;
+    text: transform 3px;
+    white: space 3px; /*this is changing the font of all elements under the bodies class*/
+} 
+.rubik-wet-paint-regular {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+#home {
+    font-family:"Rubik Wet Paint" ;
+} /*changning header on home page to google font*/ 
