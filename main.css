@@ -23,12 +23,12 @@ ul.nav-menu :hover {
 .bodies {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 14px;
-    font-weight: 4px;
+    font-weight:normal;
     letter-spacing: normal; 
     line-height: 20px; 
-    text-align: 3px;
-    text-transform: 3px;
-    white-space: 3px; /*this is changing the font of all elements under the bodies class*/
+    text-align: normal;
+    text-transform: normal;
+    white-space: normal; /*this is changing the font of all elements under the bodies class*/
 } 
 .rubik-wet-paint-regular {
     font-family: "Rubik Wet Paint", system-ui;
