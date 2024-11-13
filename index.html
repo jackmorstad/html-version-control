@@ -9,26 +9,94 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
-<body id="main-body">
-    <!--The following headers include all the main written text on page 1 of my website.-->
-    <section>
-    <h1 class = "header" id="home">Home</h1>
-    <h2>About:</h2>
-    <p id="firstparagraph">Hello I am <strong>Jackson Morstad.</strong>This is my portfolio website. I am currently an aspiring graphic desinger. On this site, you will be able to find my resume, my contact information, and some more information all about me and my work!</p>
-    </section>
-    <h3>Projects</h3>
-    <p class="bodies">so far, I only have one graphic design project to showcase. 
-        click the link below to download the PDF: 
-    </p>
-    <a href="Portfolio-Identity-Project.pdf" target="_blank">download PDF</a>
-    <h5>Contact information</h5>
-   <ul><li class="bodies">Email:jackmorstad@gmail.com</li><li class="bodies">Phone number: (587)-576-0487</li><li class="bodies">Instagram:@steaksonaplanee</li></ul>
-   <!--Wish I could make it more visually appealing but, this is the navigation section of my website.-->
-   <nav>
-    <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="page2.html">Page 2</a></li>
-    </ul>
 </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 250px 1fr; /* 250px for the sidebar, 1fr for the main content */
+            grid-template-rows: auto 1fr auto; /* Auto height for header/footer, flexible main content */
+            grid-template-areas: 
+                "header header"
+                "sidebar main-content"
+                "footer footer";
+            height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #bd0000;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .main-content {
+            grid-area: main-content;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #bd0000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1 class = "header" id="home">Home</h1>
+        </div>
+        <div class="sidebar">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                     <li><a href="page2.html">Page 2</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <body id="main-body">
+                <!--The following headers include all the main written text on page 1 of my website.-->
+                <section>
+                <h2>About:</h2>
+                <p id="firstparagraph">Hello I am <strong>Jackson Morstad.</strong>This is my portfolio website. I am currently an aspiring graphic desinger. On this site, you will be able to find my resume, my contact information, and some more information all about me and my work!</p>
+                </section>
+                <h3>Projects</h3>
+                <p class="bodies">so far, I only have one graphic design project to showcase. 
+                    click the link below to view the PDF: 
+                </p>
+                <a href="Portfolio-Identity-Project.pdf" target="_blank">download PDF</a>
+                <h5>Contact information</h5>
+               <ul><li class="bodies">Email:jackmorstad@gmail.com</li><li class="bodies">Phone number: (587)-576-0487</li><li class="bodies">Instagram:@steaksonaplanee</li></ul>
+        </div>
+        <div class="footer">
+            Jackson Morstad
+        </div>
+    </div>
+
+</body>
+</html>
+
 </body>
 </html>
