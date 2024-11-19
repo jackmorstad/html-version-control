@@ -85,6 +85,28 @@
             <body id="main-body">
                 <!--The following headers include all the main written text on page 1 of my website.-->
                 <section>
+                <p id="greeting"></p>
+                 <!-- The button will be created and added here by JavaScript -->
+                 <button id="btn-alert">Click Me!</button>
+    <script>
+        // Get the button by its ID
+    const button = document.getElementById("btn-alert");
+
+    // Add an event listener for the 'click' event
+    button.addEventListener("click", function() {
+      // Show an alert when the button is clicked
+      alert("Hello world!");
+    });
+      // Change the text when the mouse hovers over the button
+      button.addEventListener("mouseover", function() {
+        button.textContent = "You are hovering!";
+      });
+
+      // Restore the original text when the mouse moves away
+      button.addEventListener("mouseout", function() {
+        button.textContent = "Click Me!";
+      });
+    </script>
                 <h2>About:</h2>
                 <p id="firstparagraph">Hello I am <strong>Jackson Morstad.</strong>This is my portfolio website. I am currently an aspiring graphic desinger. On this site, you will be able to find my resume, my contact information, and some more information all about me and my work!</p>
                 </section>
@@ -95,9 +117,33 @@
                 <a href="Portfolio-Identity-Project.pdf" target="_blank">download PDF</a>
                 <h5>Contact information</h5>
                <ul><li class="bodies">Email:jackmorstad@gmail.com</li><li class="bodies">Phone number: (587)-576-0487</li><li class="bodies">Instagram:@steaksonaplanee</li></ul>
+               <!--new ordered list for js-->
+               <ol id="numbers">
+              <!--Js will put list here-->
+              </ol>
+
+              <script>
+                // Get the reference to the ordered list by its ID
+const ol = document.getElementById('numbers');
+
+// Loop 12 times to create 12 <li> elements
+for (let i = 1; i <= 12; i++) {
+  // Create a new <li> element
+  const li = document.createElement('li');
+
+  if (i % 2 === 0) {
+        li.textContent = `Even number: ${i}`;
+      } else {
+        li.textContent = `Odd number: ${i}`;
+      };
+
+  // Append the <li> element to the ordered list
+  ol.appendChild(li);
+}
+              </script>
         </div>
         <div class="footer">
-            Jackson Morstad
+            <p>(c) Jackson Morstad, 2024. <span id="current-date"></span></p>
         </div>
     </div>
 
